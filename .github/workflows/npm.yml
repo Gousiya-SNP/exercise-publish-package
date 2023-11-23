@@ -8,9 +8,8 @@ jobs:
       - uses: actions/setup-node@v1
         with:
           node-version: 12
-      - run: cd sample-packages/npm/
-      - run: npm ci
-      - run: npm test
+      - run: npm ci /sample-packages/npm/
+      - run: npm test /sample-packages/npm/
   publish-gpr:
     needs: build
     runs-on: ubuntu-latest
